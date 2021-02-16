@@ -3,3 +3,11 @@
     <li><%= @task.completed %></li>
     <li><%= @task.details %></li>
 </ul>
+<h3><%= link_to "Edit this task", edit_path %></h3>
+
+<h3><%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %></h3>
+
+<h3><%= link_to "Back to tasks", index_path %></h3>
